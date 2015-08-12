@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block head_title %} {{ post.title }} {% endblock head_title %}
+{% block title %} {{ post.title}} {% endblock title %}
+
+{% block content %}
+        {{ post.body }}
+{% endblock content %}

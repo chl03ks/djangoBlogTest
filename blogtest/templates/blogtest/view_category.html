@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block head_title %}<h2>Viewing category {{ category.title  }}</h2>{% endblock head_title %}
+{% block title %}{{ category.title }}{% endblock title %}
+
+{% block content %}
+    {% if post %}
+          <ul class="list-group">
+          {% for post in  posts %}
+              <li class="list-group-item"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+    {% else %}
+        <h3>There are no posts</h3>
+    {% endif %}
+
+{% endblock content %}
